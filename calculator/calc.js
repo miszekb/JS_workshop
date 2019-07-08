@@ -3,7 +3,7 @@ var result = 0;
 var operationsCodes = "+-*/^";
 
 function showResult() {
-
+    document.getElementById("result").innerHTML = result;
 }
 
 function generateButtons() {
@@ -16,7 +16,9 @@ function generateButtons() {
     }
     
     document.getElementById("digitButtons").innerHTML = content + '<span class="button" id ="d_button_dot">.</span>';
+    
     content = "";
+
     for(i = 0 ; i < operationsCodes.length; i++) {
         content += '<span class="button" id ="o_button'+ operationsCodes.charAt(i) +'">'+ operationsCodes.charAt(i) +'</span>'+'<div style="clear: both;"></div>';
     }
