@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+        <title>PART 2</title>
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+        <script type="text/javascript">
+
+            function check() {
+
+                var number = document.getElementById("area").value;
+
+                if (number > 0) {
+                    document.getElementById("result").innerHTML = "positive";
+                }
+                else if (number == 0)
+                {
+                    document.getElementById("result").innerHTML = "zero";
+                }
+                else {
+                    document.getElementById("result").innerHTML = "negative";
+                }
+            }
+
+            function calculate() {
+
+                var num1 = document.getElementById("area1").value;
+                var num2 = document.getElementById("area2").value;
+                var finalString = "";
+
+                if(num1 - num2 > 0) document.getElementById("result2").innerHTML = "wrong data";
+
+                for (i = num1; i <= num2; i++) {
+                    finalString += i + " ";
+                }
+
+                document.getElementById("result2").innerHTML = finalString;
+            }
+            
+            var number = Math.floor(Math.random()*4)+1;
+            var timer1 = 0;
+            var timer2 = 0;
+
+            function setSlide(num)
+            {
+                clearTimeout(timer1);
+                clearTimeout(timer2);
+                number = num - 1;
+
+                hide();
+                setTimeout("switchSlide()", 500);
+            }
+
+            function hide()
+            {
+                $("#slider").fadeOut(500);
+            }
+
+            function switchSlide()
+            {
+                number++;
+                if(number > 4) number = 1;
+
+                var file = "<img src=\"slide"+number+".jpg\"/ width=\"400\" height=\"200\">";
+                document.getElementById("slider").innerHTML = file;
+                $("#slider").fadeIn(500);
+                timer1 = setTimeout("switchSlide()", 4000);
+                timer2 = setTimeout("hide()", 3500);
+            }
+
+        </script>
+</head>
+<body onload="switchSlide()">
+    <input id="area" type="text"/>
+    <input type="submit" value="Check" onclick="check();"/>
+    <div id="result"></div>
+    <br>
+    <input id="area1" type="text"/>
+    <input id="area2" type="text"/>
+    <input type="submit" value="Check" onclick="calculate();"/>
+    <div id="result2"></div>
+
+    <span onclick="setSlide(1)" style="cursor:pointer;">[ 1 ]</span>
+    <span onclick="setSlide(2)" style="cursor:pointer;">[ 2 ]</span>
+    <span onclick="setSlide(3)" style="cursor:pointer;">[ 3 ]</span>
+    <span onclick="setSlide(4)" style="cursor:pointer;">[ 4 ]</span>
+
+    <div id="slider"></div>
+</body>
+</html>

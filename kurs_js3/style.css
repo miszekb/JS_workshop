@@ -1,0 +1,55 @@
+body {
+    background: black;
+    color: lightgray;
+    font-size: 28px;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 700;
+}
+
+#mainContainer {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#board {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 48px;
+    min-height: 60px;
+}
+
+#hang {
+    float:left;
+    width: 50%;
+    text-align: center;
+    min-height: 280px;
+}
+
+#alphabet {
+    float:left;
+    width: 50%;
+    text-align: center;
+    min-height: 280px;
+}
+
+.letter {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    border: 3px solid;
+    border-radius: 10px;
+    float: left;
+    cursor: pointer;
+    font-family: Verdana;
+}
+
+.letter:hover {
+    background-color: #222222;
+    color:white;
+    border: 3px solid white;
+}
