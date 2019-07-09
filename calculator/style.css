@@ -10,9 +10,28 @@
     float: left;
 }
 
+h2 {
+    color: white;
+    font-size: 48px;
+    text-align: center;
+}
+.dbutton {
+    border: 2px solid white;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+    font-size: 42px;
+    margin: 10px;
+    color: white;
+    float: left;
+    background-color: #111144;
+}
+
 #keyboard {
     width: 100%;
-    align-self: center;
+    align-content: center;
+
 }
 
 #digitButtons {
@@ -24,6 +43,7 @@
 #mainContainer {
     padding-left: 30%;
     padding-right: 30%;
+    align-content: center;
 }
 
 #operationalButtons {
@@ -40,7 +60,7 @@
     font-size: 26px;
 }
 
-.button:hover {
+.button:hover, .dbutton:hover{
     background-color: grey;
 }
 
