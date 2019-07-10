@@ -1,0 +1,53 @@
+#mainContainer {
+    border: 3px solid #598f5d;
+    margin-top: 8%;
+    margin-left: 30%;
+    margin-right: 30%;
+    align-content: center;
+    padding: 20px;
+    background-color: #598f5d;
+    color: white;
+    font-family: 'Gaegu', cursive;
+    font-size: 20px;
+}
+
+#menuContainer {
+    background-color: #598f5d;
+    width: 98%;
+    font-family: 'Gaegu', cursive;
+    color: white;
+    padding-left: 20px;
+    padding-top: 5px;
+    font-size: 36px;
+}
+
+button {
+    margin-top: 35px;
+    border-radius: 15px;
+    width: 100%;
+    font-size: 24px;
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: hsl(132, 57%, 17%);
+    color: white;
+
+    font-family: 'Gaegu', cursive;
+
+}
+
+button:hover {
+    background-color: #8bc990;
+    cursor: pointer;
+}
+
+input {
+    height: 40px;
+    width: 97%;
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+body {
+    background-image: url("background.jpg");
+}
