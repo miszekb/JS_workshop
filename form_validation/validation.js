@@ -1,8 +1,9 @@
+var canRegister = false;
+
 function validateMAIL() {
-    var canRegister = false;
     var userData = new Array(3);
 
-    var nickname = document.getElementsByName("nickname").values;
+    var nickname = document.getElementsByName("nickname").value;
     //TODO: nickname validation
     userData.push(nickname);
 
@@ -44,12 +45,40 @@ function validateMAIL() {
     }
 }
 
-function validatePASS() {
+var specialChars = "<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=";
 
+function validatePASS() {
+    const password = document.getElementById("pwd").value;
+    var hasSign = false;
+    var hasUppercase = false;
+
+    if(password.length < 8) {
+        alert("Password too short!\n");
+        return;
+    }
+
+    for(i = 0; i < password.length; i++) {
+        if(password.charAt(i) == password.charAt(i).toUpperCase()) {
+            hasUppercase = true;
+            alert(password.charAt(i));
+        }
+        for(j = 0; j < specialChars.length; j++) {
+            if(password.charAt(i) == specialChars.charAt(j)) {
+                hasSign = true;
+            }
+        }
+    }
+
+    if(hasSign && hasUppercase) {
+        if()
+        alert("ok");
+    }
+    else alert("No uppercase letter and/or special sign!\n");
 }
 
 function validation() {
     validateMAIL();
     validatePASS();
+    if(canRegister) alert("You've been registered successfully!")
 }
 
