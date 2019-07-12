@@ -8,7 +8,7 @@ function showResult() {
 }
 
 function generateButtons() {
-
+    initKeys();
     var content = "";
 
     for(i = 9; i >= 0; i--) {
@@ -204,3 +204,29 @@ function power(param1, param2) {
 }
 
 window.onload = generateButtons;
+
+function initKeys() {
+    document.addEventListener('keydown', function(event) {
+        if(parseInt(String.fromCharCode(event.keyCode)) >= 0 && parseInt(String.fromCharCode(event.keyCode)) <= 9) {
+            console.log("EE");
+            digitButtonClick(parseInt(String.fromCharCode(event.keyCode)));
+        }
+        else {
+            switch (event.keyCode) {
+                case 190:
+                    addDot();
+                    break;
+                    /*
+                case 189:
+                    console.log("-");
+                    result += String.fromCharCode(event.keyCode);
+                    document.getElementById("result").innerHTML = result;
+                    break;
+                default:
+                    console.log(event.keyCode);
+                    break; */
+
+            }
+        }
+    });
+}
