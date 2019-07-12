@@ -38,7 +38,7 @@ function validateMAIL() {
     }
 
     for(i = 0; i < piece2.length; i++) {
-        if (isNaN(parseInt(piece2.charAt(i), 10)) && 
+        if (isNaN(parseInt(piece2.charAt(i), 10)) l&& 
         piece2.charAt(i).toLowerCase() == piece2.charAt(i).toUpperCase()) {
         alert("mam cie HAHA"+i);
         }
@@ -74,6 +74,9 @@ function validatePASS() {
         alert("ok");
     }
     else alert("No uppercase letter and/or special sign!\n");
+
+    if(password != document.getElementById("rep_pwd").value) alert("Passwords does not match!");
+
 }
 
 function validation() {
